@@ -32,6 +32,7 @@ public class ReviewServiceImpl implements IReviewService {
             checkUserExists(reviewDetails);
             boolean isReviewSaved = reviewRepository.saveReview(reviewDetails);
             if (isReviewSaved) {
+                System.out.println("Review saved successfully. ");
                 calculateRelevanceScore(reviewDetails.getReviewId());
             }
             return reviewDetails;
