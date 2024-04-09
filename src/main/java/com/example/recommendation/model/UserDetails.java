@@ -31,4 +31,10 @@ public class UserDetails {
     @Pattern(regexp = "^\\d{10}$", message = "Invalid mobile number entered")
     private String mobile;
 
+    public UserDetails(String name, String dateOfJoining, Skill skill, String mobile) {
+        this.name = name;
+        this.dateOfJoining = LocalDate.parse(dateOfJoining);
+        this.skill = skill;
+        this.mobile = mobile;
+    }
 }

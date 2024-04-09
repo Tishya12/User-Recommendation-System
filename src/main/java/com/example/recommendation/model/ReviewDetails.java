@@ -26,4 +26,10 @@ public class ReviewDetails {
     RelevanceScore relevanceScore;
 
 
+    public ReviewDetails(Boolean isCoworker, Long reviewerId, Long revieweeId, String reviewMsg) {
+        this.isCoworker = isCoworker;
+        this.reviewerId = reviewerId;
+        this.revieweeId = revieweeId;
+        this.reviewMsg = reviewMsg;
+    }
 }
